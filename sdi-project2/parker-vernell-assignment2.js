@@ -5,7 +5,8 @@
 
 var drill = "Drill Sergeant";
 var countDown = 10;
-var soldier = ("Miller", "Johnson" , "Perez");
+var soldier = ["Miller!","Johnson!","Perez!"];
+var timeTable = ("Can" + " we" + " make it????"); 
 
 //funcion
 var time = function (x,y) {
@@ -38,4 +39,13 @@ if (days === 0) {
 	} else { ("");
 };
 console.log("But " + drill + " has an idea that may save the world"); 
+console.log(timeTable);
+console.log("Yes I think we can make it, Lets nuke em' says the " + drill);
+console.log(soldier[0] + "!! I need help with the nuke"); 
+console.log(soldier[1] + "!! get everyone ready");
+console.log(soldier[2] + "!! get the timer");
+for (var i=0; i < 3; i++) {
+	console.log( soldier[i] );
+};
+console.log("We got to go now!")
 
