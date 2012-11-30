@@ -7,7 +7,6 @@ var drill = "Drill Sergeant";
 var countDown = 10;
 var soldier = ["Miller!","Johnson!","Perez!"];
 var timeTable = ("Can" + " we" + " make it????"); 
-
 //funcion
 var time = function (x,y) {
 	var weeks = x-y;
@@ -22,6 +21,7 @@ var time2 = function (x,y) {
     var days = x-y;
 	return days;
 };
+
 //main code
 
 time(10,7);
@@ -43,9 +43,29 @@ console.log(timeTable);
 console.log("Yes I think we can make it, Lets nuke em' says the " + drill);
 console.log(soldier[0] + "!! I need help with the nuke"); 
 console.log(soldier[1] + "!! get everyone ready");
-console.log(soldier[2] + "!! get the timer");
+console.log(soldier[2] + "!! get the timer, can you handle that???");
 for (var i=0; i < 3; i++) {
 	console.log( soldier[i] );
 };
+if (i=0) {
+	console.log(" I need that timer")
+	}else {
 console.log("We got to go now!")
+	};
 
+console.log("Set the timers!!!!")
+
+for (var countDown = 10; countDown > 0; countDown--) {
+console.log(countDown + " BEEP!");
+}; 
+
+console.log("GOODBYE!!!!");
+console.log("Rate this Story...In Code!!!!")
+
+//Rate My Code...In Code
+var rate = "10"
+if (rate >= 7) { 
+console.log(" You My Frind Are AWESOME");
+} else { 
+	console.log(" Well I Tried, Sorry :(")
+};
