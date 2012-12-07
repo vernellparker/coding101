@@ -9,7 +9,7 @@ var warCry = ("Let them come. " + "We'll kill them all!!!!");
 var theMoment = ("It is time to" + " rid ourselves of this alien menus!!!" )
 var distance = 150
 var ready = true
-var crunchtime = 75 
+var crunchtime = 20 
 var ship = {
 	name: "Death Star",
 	race: "Glormac",
@@ -60,5 +60,12 @@ console.log(soldier + " get phaser cannons ready!")
 console.log("New information just came in...")
 console.log("The ship is smaller then we first project the computers were wrong")
 ship.size = "50 miles long";
-console.log("The new information is is telling us that the new size is only " + ship.size)
-	
+console.log("The new information is is telling us that the new size is only " + ship.size);
+while (crunchtime > 0) {
+	console.log(crunchtime + " seconds");
+	crunchtime--;
+};
+
+console.log("FIRE FIRE FIRE, yells " + drill);
+console.log("As the sound of cannon begin to fire off");
+console.log("And with the sound of those cannons birthed a world as we know it")
