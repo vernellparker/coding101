@@ -9,13 +9,13 @@ var warCry = ("Let them come. " + "We'll kill them all!!!!");
 var theMoment = ("It is time to" + " rid ourselves of this alien menus!!!" )
 var distance = 150
 var ready = true
+var crunchtime = 75 
 var ship = {
 	name: "Death Star",
 	race: "Glormac",
 	size: " 100 miles long",
 	threat: " Immediate Danger",
 };
-
 
 
 ship.name = "Destoryer";
@@ -46,5 +46,19 @@ if (distance >= 150){
 	console.log("We have plenty of time to put our plan in place!!!")
 	} else { console.log(" We are running out of time")
 	};
-	
+console.log("Is everyone ready to do what we have to do to when this battle")
+if (ready === true){
+	console.log("Then let us prepare for the final battle for our home world!!!")
+	} else { console.log("We can't wait any longer!!! May God help us all!!!")
+	};
+console.log("This is a fight til the death")
+console.log(warCry)
+console.log("How large is the ship?")
+console.log(ship.size)
+console.log("We're going to blow it out of the sky")
+console.log(soldier + " get phaser cannons ready!")
+console.log("New information just came in...")
+console.log("The ship is smaller then we first project the computers were wrong")
+ship.size = "50 miles long";
+console.log("The new information is is telling us that the new size is only " + ship.size)
 	
