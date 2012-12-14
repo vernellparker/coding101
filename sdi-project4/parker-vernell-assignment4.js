@@ -31,10 +31,6 @@ var myLibrary = function(){
 			  
 
 
-//  String start with http: or https:
-
-
-
 //  Title-case a string
 
 
@@ -53,19 +49,28 @@ var caps = function(val) {
 }
 
 
-//  String return separator
-
-
 //  Decimals Places 
+var oNumber = function(val){
+	var newNew = val.toFixed(2)
+	return newNew
+}
 
 
-//  Fuzzy- match a number
 
 
-//  Number of hours or days
+//  URL
 
 
-//  Return Actual Number
+var urlCheck = function(val) {
+    	var url = val
+    	var urlPattern = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
+    	if (urlPattern.test(url)) {
+        return true;
+    	} else {
+        return false;
+    	}
+}
+  
 
 	
 
@@ -79,9 +84,6 @@ Array.prototype.minGreaterThan = function(numValue){
     return num;
 };
 
-//  Total value in an array
-
-
 
 
 //  Return array sorted by the value
@@ -90,7 +92,10 @@ Array.prototype.minGreaterThan = function(numValue){
 		
 	    "emailCheck": emailCheck,
 		"phnum": phnum,
-		"caps": caps
+		"caps": caps,
+		"urlCheck": urlCheck,
+		"oNumber": oNumber
+		
 	
 	}
 
@@ -103,8 +108,8 @@ var newLib = new myLibrary();
 
 
 // Smallest value in an array
-var arr=[15,45,81,64,125,792,458,1657,152,154,20],num=20;
-console.log(arr.minGreaterThan(num));
+var arr=[15,45,81,64],num=20;
+console.log("The greatest number is " + arr.minGreaterThan(num));
 
 // email pattern test
 console.log("Is this email correct?" + newLib.emailCheck("meyahoo.com"))
@@ -112,4 +117,9 @@ console.log("Is this email correct?" + newLib.emailCheck("meyahoo.com"))
 //Phone Number Pattern
 console.log("Is this a valid phone number?" + newLib.phnum("706-284-8605"))
 
+//  Two word caps
 console.log(newLib.caps("money mike"));
+
+console.log("Is this a vaild url?" + newLib.urlCheck("//www.google.com/"))
+
+console.log("The correct amount is " + newLib.oNumber(125.4324))
