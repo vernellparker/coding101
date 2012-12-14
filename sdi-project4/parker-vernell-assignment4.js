@@ -21,7 +21,7 @@ var myLibrary = function(){
 //  String for email address
 	var emailCheck = function(val) {
     	var emailAddress = val
-    	var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/
+    	var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/;
     	if (emailPattern.test(emailAddress)) {
         return true;
     	} else {
@@ -42,7 +42,7 @@ var caps = function(val) {
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
     };
-    // takes my name as "shannon plesh" and converts the first letter of each word to upper case.
+   
     return val.toProperCase();
     
 
