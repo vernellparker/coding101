@@ -7,11 +7,27 @@
 var myLibrary = function(){
 
 //  String for phone number Pattern
-	
+	var phnum = function (val) {
+        var phoneNumber = val;
+        var pattern = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/; 
+        if (pattern.test(phoneNumber)) { 
+            return true
+        } else {
+            return false; 
+        }
+    }
 
 
 //  String for email address
-	
+	var emailCheck = function(val) {
+    	var emailAddress = val
+    	var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/
+    	if (emailPattern.test(emailAddress)) {
+        return true;
+    	} else {
+        return false;
+    	}
+    }
 			  
 
 
@@ -20,6 +36,21 @@ var myLibrary = function(){
 
 
 //  Title-case a string
+
+
+var caps = function(val) {
+ 
+    String.prototype.toProperCase = function () {
+ 
+        return this.replace(/\w\S*/g, function (txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+    };
+    // takes my name as "shannon plesh" and converts the first letter of each word to upper case.
+    return val.toProperCase();
+    
+
+}
 
 
 //  String return separator
@@ -51,10 +82,15 @@ Array.prototype.minGreaterThan = function(numValue){
 //  Total value in an array
 
 
+
+
 //  Return array sorted by the value
 
 	return {
-		"num": num
+		
+	    "emailCheck": emailCheck,
+		"phnum": phnum,
+		"caps": caps
 	
 	}
 
@@ -64,5 +100,16 @@ Array.prototype.minGreaterThan = function(numValue){
 
 var newLib = new myLibrary();
 
-var arr=[15,45,81,64,125,792,458,1657,152,154,20],num=10;
+
+
+// Smallest value in an array
+var arr=[15,45,81,64,125,792,458,1657,152,154,20],num=20;
 console.log(arr.minGreaterThan(num));
+
+// email pattern test
+console.log("Is this email correct?" + newLib.emailCheck("meyahoo.com"))
+
+//Phone Number Pattern
+console.log("Is this a valid phone number?" + newLib.phnum("706-284-8605"))
+
+console.log(newLib.caps("money mike"));
