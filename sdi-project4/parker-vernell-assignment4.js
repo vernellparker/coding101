@@ -30,7 +30,7 @@ var myLibrary = function(){
     }
 			  
 
-
+//  Actual Number
 var oldNumber =  function(val){
 	var newnumber = parseInt(val)
 	return newnumber
@@ -108,7 +108,7 @@ console.log("Is this email correct?" + newLib.emailCheck("meyahoo.com"))
 //Phone Number Pattern
 console.log("Is this a valid phone number?" + newLib.phnum("706-284-8605"))
 
-//  Two word caps
+//  Actual Number
 console.log("The new number is " + newLib.oldNumber("22"));
 
 //url check
