@@ -89,7 +89,7 @@ Array.prototype.minGreaterThan = function(numValue){
 //  Return array sorted by the value
 
 	return {
-		
+		"num": num, 
 	    "emailCheck": emailCheck,
 		"phnum": phnum,
 		"caps": caps,
@@ -120,6 +120,8 @@ console.log("Is this a valid phone number?" + newLib.phnum("706-284-8605"))
 //  Two word caps
 console.log(newLib.caps("money mike"));
 
+//url check
 console.log("Is this a vaild url?" + newLib.urlCheck("//www.google.com/"))
 
+// decimal number
 console.log("The correct amount is " + newLib.oNumber(125.4324))
