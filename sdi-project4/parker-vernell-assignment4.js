@@ -34,20 +34,6 @@ var myLibrary = function(){
 //  Title-case a string
 
 
-var caps = function(val) {
- 
-    String.prototype.toProperCase = function () {
- 
-        return this.replace(/\w\S*/g, function (txt) {
-            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        });
-    };
-   
-    return val.toProperCase();
-    
-
-}
-
 
 //  Decimals Places 
 var oNumber = function(val){
