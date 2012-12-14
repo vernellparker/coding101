@@ -31,7 +31,12 @@ var myLibrary = function(){
 			  
 
 
-//  Title-case a string
+var oldNumber =  function(val){
+	var newnumber = parseInt(val)
+	return newnumber
+	
+	
+}
 
 
 
@@ -78,9 +83,9 @@ Array.prototype.minGreaterThan = function(numValue){
 		"num": num, 
 	    "emailCheck": emailCheck,
 		"phnum": phnum,
-		"caps": caps,
 		"urlCheck": urlCheck,
-		"oNumber": oNumber
+		"oNumber": oNumber,
+		"oldNumber": oldNumber
 		
 	
 	}
@@ -104,7 +109,7 @@ console.log("Is this email correct?" + newLib.emailCheck("meyahoo.com"))
 console.log("Is this a valid phone number?" + newLib.phnum("706-284-8605"))
 
 //  Two word caps
-console.log(newLib.caps("money mike"));
+console.log("The new number is " + newLib.oldNumber("22"));
 
 //url check
 console.log("Is this a vaild url?" + newLib.urlCheck("//www.google.com/"))
